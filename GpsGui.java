@@ -41,7 +41,7 @@ public class GpsGui {
             t1String = (expected[0]);
             //t1String is printing Tracker with number
             return t1String; 
-            }).hold(" ");
+            }).hold("");
             //Label for printing Latitude
             SLabel lA = new SLabel(tNum);
             frame.add(lA);
