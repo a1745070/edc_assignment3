@@ -1,7 +1,8 @@
 import nz.sodium.*;
 import javax.swing.*;
-import java.awt.FlowLayout;
 import swidgets.*;
+import java.awt.FlowLayout;
+import javax.swing.table.*;
 
 public class GpsGui {
 
@@ -20,9 +21,36 @@ public class GpsGui {
         Stream<GpsEvent>[] streams = serv.getEventStreams(); 
 
         //Code to Attach a handler method to each stream from Example.java
-        for(Stream<GpsEvent> s : streams){
+        for(Stream<GpsEvent> s : streams)
+        {
+            s.listen((GpsEvent ev) -> { 
             //Printing the GPS Data on the terminal
-            s.listen((GpsEvent ev) -> System.out.println(ev));
+            System.out.println(ev);
+             });
+
+            //Printing Tracker with numbers
+            Cell<String> tNum;
+            tNum = s.map((GpsEvent ev) -> 
+            {
+            String[] expected;
+            //Using split to remove space after Tracker to directly print Latitude
+            expected = ev.toString().split(" ");
+            
+            String t1String;
+            //Printing Latitute as it is at place 2 in the array
+            t1String = (expected[2]);
+            //t1String is printing Latitude
+            return t1String;  
+            }).hold(" ");
+            
+            //Label for printing Latitude
+            SLabel lA = new SLabel(tNum);
+            frame.add(lA);
+            //Layout for printing
+            frame.setLayout(new FlowLayout());
+            // Setting Gui as visible
+            frame.setVisible(true);
         }
-    }
-}
+     }
+ }
+ 
