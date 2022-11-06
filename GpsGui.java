@@ -102,11 +102,12 @@ public class GpsGui {
             }).hold("");
             //Label for printing Longitude
             SLabel lC = new SLabel(lonNum);
-            frame.add(lC);
+            Font fLot = new Font("Serif", Font.BOLD, 16);
+            lC.setFont(fLot);
             lC.setForeground(Color.ORANGE);
             lC.setPreferredSize(new Dimension(130, 30));
-            Font fLot = new Font("Serif", Font.BOLD, 16);
-            lA.setFont(fLot);
+            frame.add(lC);
+           
 
 
            
