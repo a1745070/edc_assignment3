@@ -3,9 +3,10 @@ import javax.swing.*;
 import swidgets.*;
 import java.awt.FlowLayout;
 import javax.swing.table.*;
-import java.text.SimpleDateFormat;  
-import java.util.Date;
-
+import javax.swing.JComponent;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.*;    
 
 public class GpsGui {
 
@@ -29,8 +30,6 @@ public class GpsGui {
             s.listen((GpsEvent ev) -> { 
             //Printing the GPS Data on the terminal
             System.out.println(ev);
-
-
              });
   
 
@@ -51,6 +50,10 @@ public class GpsGui {
             //Label for printing Latitude
             SLabel lA = new SLabel(tNum);
             frame.add(lA);
+            lA.setForeground(Color.BLUE);
+            lA.setVerticalAlignment(SwingConstants.TOP);
+
+       
 
 
             // Printing Latitude 
@@ -70,6 +73,7 @@ public class GpsGui {
             //Label for printing Latitude
             SLabel lB = new SLabel(lNum);
             frame.add(lB);
+            lB.setForeground(Color.RED);
 
             
             // Printing Longitude 
@@ -89,6 +93,9 @@ public class GpsGui {
             //Label for printing Longitude
             SLabel lC = new SLabel(lonNum);
             frame.add(lC);
+            lC.setForeground(Color.ORANGE);
+
+
            
             //Layout for printing
             frame.setLayout(new FlowLayout());
