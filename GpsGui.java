@@ -11,7 +11,7 @@ public class GpsGui {
         //GUI frame heading
         JFrame frame = new JFrame("GUI");
         //Frame Size
-        frame.setSize(200, 250);
+        frame.setSize(282, 300);
         //On Pressing GUI cross stop running the application
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
@@ -37,7 +37,7 @@ public class GpsGui {
             //Using split to remove space to directly print Tracker
             expected= ev.toString().split(" ");
             String t1String;
-            //Printing Latitute as it is at place 0 in the array
+            //Printing Tracker as it is at place 0 in the array
             t1String = (expected[0]);
             //t1String is printing Tracker with number
             return t1String; 
@@ -47,7 +47,7 @@ public class GpsGui {
             frame.add(lA);
 
 
-            // Printing Latitude with numbers
+            // Printing Latitude 
             Cell<String> lNum;
             lNum = s.map((GpsEvent ev) -> 
             {
@@ -63,6 +63,24 @@ public class GpsGui {
             //Label for printing Latitude
             SLabel lB = new SLabel(lNum);
             frame.add(lB);
+
+            
+            // Printing Longitude with numbers
+            Cell<String> lonNum;
+            lonNum = s.map((GpsEvent ev) -> 
+            {
+            String []expected;
+            //Using split to remove space after Tracker to directly print Latitude
+            expected = ev.toString().split(" ");
+            String t3String;
+            //Printing Latitute as it is at place 2 in the array
+            t3String = (expected[3]);
+            //t2String is printing Latitude
+            return t3String;  
+            }).hold("");
+            //Label for printing Latitude
+            SLabel lC = new SLabel(lonNum);
+            frame.add(lC);
 
 
            
