@@ -11,7 +11,7 @@ public class GpsGui {
         //GUI frame heading
         JFrame frame = new JFrame("GUI");
         //Frame Size
-        frame.setSize(700, 700);
+        frame.setSize(280, 200);
         //On Pressing GUI cross stop running the application
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
@@ -33,7 +33,7 @@ public class GpsGui {
             Cell<String> tNum;
             tNum = s.map((GpsEvent ev) -> 
             {
-            String[] expected;
+            String []expected;
             //Using split to remove space to directly print Tracker
             expected= ev.toString().split(" ");
             String t1String;
@@ -48,21 +48,21 @@ public class GpsGui {
 
 
             //Printing Latitude with numbers
-            Cell<String> lNum;
-            lNum = s.map((GpsEvent ev) -> 
-            {
-            String[] expected;
-            //Using split to remove space after Tracker to directly print Latitude
-            expected = ev.toString().split(" ");
-            String t2String;
-            //Printing Latitute as it is at place 2 in the array
-            t2String = (expected[2]);
-            //t2String is printing Latitude
-            return t2String;  
-            }).hold(" ");
-            //Label for printing Latitude
-            SLabel lB = new SLabel(lNum);
-            frame.add(lB);
+            // Cell<String> lNum;
+            // lNum = s.map((GpsEvent ev) -> 
+            // {
+            // String[] expected;
+            // //Using split to remove space after Tracker to directly print Latitude
+            // expected = ev.toString().split(" ");
+            // String t2String;
+            // //Printing Latitute as it is at place 2 in the array
+            // t2String = (expected[2]);
+            // //t2String is printing Latitude
+            // return t2String;  
+            // }).hold(" ");
+            // //Label for printing Latitude
+            // SLabel lB = new SLabel(lNum);
+            // frame.add(lB);
 
 
            
