@@ -3,6 +3,9 @@ import javax.swing.*;
 import swidgets.*;
 import java.awt.FlowLayout;
 import javax.swing.table.*;
+import java.text.SimpleDateFormat;  
+import java.util.Date;
+
 
 public class GpsGui {
 
@@ -26,6 +29,8 @@ public class GpsGui {
             s.listen((GpsEvent ev) -> { 
             //Printing the GPS Data on the terminal
             System.out.println(ev);
+
+
              });
   
 
@@ -84,8 +89,6 @@ public class GpsGui {
             //Label for printing Longitude
             SLabel lC = new SLabel(lonNum);
             frame.add(lC);
-
-
            
             //Layout for printing
             frame.setLayout(new FlowLayout());
@@ -94,4 +97,3 @@ public class GpsGui {
         }
      }
  }
- 
