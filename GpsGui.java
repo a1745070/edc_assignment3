@@ -40,7 +40,8 @@ public class GpsGui {
             //Printing Tracker as it is at place 0 in the array
             t1String = (expected[0]);
             //t1String is printing Tracker with number
-            return t1String; 
+            return t1String;
+            //hold with no space  is used to make sure there is no hold in the data and it should get printing all together in the GUI 
             }).hold("");
             //Label for printing Latitude
             SLabel lA = new SLabel(tNum);
@@ -58,27 +59,29 @@ public class GpsGui {
             //Printing Latitute as it is at place 2 in the array
             t2String = (expected[2]);
             //t2String is printing Latitude
-            return t2String;  
+            return t2String;
+            //hold with no space  is used to make sure there is no hold in the data and it should get printing all together in the GUI  
             }).hold("");
             //Label for printing Latitude
             SLabel lB = new SLabel(lNum);
             frame.add(lB);
 
             
-            // Printing Longitude with numbers
+            // Printing Longitude 
             Cell<String> lonNum;
             lonNum = s.map((GpsEvent ev) -> 
             {
             String []expected;
-            //Using split to remove space after Tracker to directly print Latitude
+            //Using split to remove space after Longitude and directly print Longitude
             expected = ev.toString().split(" ");
             String t3String;
-            //Printing Latitute as it is at place 2 in the array
+            //Printing Longitude as it is at place 3 in the array
             t3String = (expected[3]);
-            //t2String is printing Latitude
+            //t3String is printing Longitude
             return t3String;  
+            //hold with no space  is used to make sure there is no hold in the data and it should get printing all together in the GUI
             }).hold("");
-            //Label for printing Latitude
+            //Label for printing Longitude
             SLabel lC = new SLabel(lonNum);
             frame.add(lC);
 
