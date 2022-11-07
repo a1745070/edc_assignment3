@@ -352,6 +352,7 @@ public class GpsGui {
             lA.setFont(ft);
             lA.setForeground(Color.BLUE);
             JLabel dist0 = new JLabel("43m");
+            dist0.setPreferredSize(new Dimension(70, 20));
             frame.add(dist0);
             dist0.setForeground(Color.YELLOW); 
             
