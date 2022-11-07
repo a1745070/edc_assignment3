@@ -151,6 +151,42 @@ public class GpsGui {
         headCb.setPreferredSize(new Dimension(1300, 50));
         frame.getContentPane().add(headCb);
         frame.add(headCb);
+        
+        JLabel lLB = new JLabel("Latitude Lower Bound: ");
+        lLB.setForeground(Color.RED);
+        frame.add(lLB );
+        STextField textA = new STextField("-90.000", 7);
+        textA.setPreferredSize(new Dimension(400, 30));
+        frame.add(textA);
+
+        JLabel lUB = new JLabel("Latitude Upper Bound: ");
+        lUB.setForeground(Color.BLUE);
+        frame.add(lUB );
+        STextField textB = new STextField("90.000", 7);
+        textB.setPreferredSize(new Dimension(400, 30));
+        frame.add(textB);
+
+        JLabel loLB = new JLabel("Longitude Lower Bound: ");
+        loLB.setForeground(Color.RED);
+        frame.add(loLB );
+        loLB.setPreferredSize(new Dimension(500, 30));
+
+        STextField textC = new STextField("180.000", 7);
+        textC.setPreferredSize(new Dimension(400, 30));
+        frame.add(textC);
+
+        JLabel loUB = new JLabel("Longitudes Upper Bound: ");
+        loUB.setForeground(Color.BLUE);
+        frame.add(loUB );
+        STextField textD = new STextField("180.000", 7);
+        textD.setPreferredSize(new Dimension(400, 30));
+        frame.add(textD);
+
+        JButton setR = new JButton("SET RANGE");
+        setR.setPreferredSize(new Dimension(200, 30));
+        setR.setForeground(Color.BLACK);
+        frame.getContentPane().add(setR);
+        frame.add(setR);
 
 
 
