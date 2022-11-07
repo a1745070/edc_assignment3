@@ -246,7 +246,7 @@ public class GpsGui {
             frame.add(lA);
             Font ft = new Font("Serif", Font.BOLD, 16);
             lA.setFont(ft);
-            lA.setForeground(Color.BLUE);
+            lA.setForeground(Color.RED);
             // lA.BorderLayout(5, 5);
             
 
@@ -268,7 +268,7 @@ public class GpsGui {
             //Label for printing Latitude
             SLabel lB = new SLabel(lNum);
             frame.add(lB);
-            lB.setForeground(Color.RED);
+            lB.setForeground(Color.GREEN);
             lB.setPreferredSize(new Dimension(150, 30));
             Font fLt = new Font("Serif", Font.BOLD, 16);
             lB.setFont(fLt);
@@ -292,7 +292,7 @@ public class GpsGui {
             SLabel lC = new SLabel(lonNum);
             Font fLot = new Font("Serif", Font.BOLD, 16);
             lC.setFont(fLot);
-            lC.setForeground(Color.ORANGE);
+            lC.setForeground(Color.BLUE);
             lC.setPreferredSize(new Dimension(180, 30));
             frame.add(lC);  
 
@@ -338,19 +338,22 @@ public class GpsGui {
             //hold with no space  is used to make sure there is no hold in the data and it should get printing all together in the GUI 
             }).hold("");
             //Label for printing Latitude
-            JLabel dist = new JLabel("Total Distance travelled by: ");
-            dist.setPreferredSize(new Dimension(200, 20));
+            JLabel dist = new JLabel("Total Distance travelled: ");
+            dist.setPreferredSize(new Dimension(180, 20));
             Font ftA = new Font("Serif", Font.BOLD, 16);
             dist.setFont(ftA);
             frame.add(dist);
-            dist.setForeground(Color.ORANGE); 
+            dist.setForeground(Color.RED); 
 
             SLabel lA = new SLabel(tNum);
-            lA.setPreferredSize(new Dimension(200, 20));
+            lA.setPreferredSize(new Dimension(70, 20));
             frame.add(lA);
             Font ft = new Font("Serif", Font.BOLD, 16);
             lA.setFont(ft);
             lA.setForeground(Color.BLUE);
+            JLabel dist0 = new JLabel("43m");
+            frame.add(dist0);
+            dist0.setForeground(Color.YELLOW); 
             
               
             //Layout for printing
