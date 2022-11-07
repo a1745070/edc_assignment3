@@ -21,7 +21,7 @@ public class GpsGui {
         //GUI frame heading
         JFrame frame = new JFrame("GUI");
         //Frame Size
-        frame.setSize(400, 420);
+        frame.setSize(470, 450);
         //On Pressing GUI cross stop running the application
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
@@ -81,7 +81,7 @@ public class GpsGui {
             SLabel lB = new SLabel(lNum);
             frame.add(lB);
             lB.setForeground(Color.RED);
-            lB.setPreferredSize(new Dimension(120, 30));
+            lB.setPreferredSize(new Dimension(150, 30));
             Font fLt = new Font("Serif", Font.BOLD, 16);
             lB.setFont(fLt);
 
@@ -105,7 +105,7 @@ public class GpsGui {
             Font fLot = new Font("Serif", Font.BOLD, 16);
             lC.setFont(fLot);
             lC.setForeground(Color.ORANGE);
-            lC.setPreferredSize(new Dimension(130, 30));
+            lC.setPreferredSize(new Dimension(180, 30));
             frame.add(lC);
            
 
