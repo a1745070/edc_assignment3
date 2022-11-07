@@ -263,61 +263,20 @@ public class GpsGui {
             //hold with no space  is used to make sure there is no hold in the data and it should get printing all together in the GUI 
             }).hold("");
             //Label for printing Latitude
+            JLabel dist = new JLabel("Total Distance travelled by: ");
+            dist.setPreferredSize(new Dimension(200, 20));
+            Font ftA = new Font("Serif", Font.BOLD, 16);
+            dist.setFont(ftA);
+            frame.add(dist);
+            dist.setForeground(Color.ORANGE); 
+
             SLabel lA = new SLabel(tNum);
-            lA.setPreferredSize(new Dimension(80, 30));
+            lA.setPreferredSize(new Dimension(200, 20));
             frame.add(lA);
             Font ft = new Font("Serif", Font.BOLD, 16);
             lA.setFont(ft);
             lA.setForeground(Color.BLUE);
-            // lA.BorderLayout(5, 5);
             
-
-
-            // Printing Latitude 
-            Cell<String> lNum;
-            lNum = s.map((GpsEvent ev) -> 
-            {
-            String []expected;
-            //Using split to remove space after Tracker to directly print Latitude
-            expected = ev.toString().split(" ");
-            String t2String;
-            //Printing Latitute as it is at place 2 in the array
-            t2String = (expected[2]);
-            //t2String is printing Latitude
-            return t2String;
-            //hold with no space  is used to make sure there is no hold in the data and it should get printing all together in the GUI  
-            }).hold("");
-            //Label for printing Latitude
-            SLabel lB = new SLabel(lNum);
-            frame.add(lB);
-            lB.setForeground(Color.RED);
-            lB.setPreferredSize(new Dimension(150, 30));
-            Font fLt = new Font("Serif", Font.BOLD, 16);
-            lB.setFont(fLt);
-
-            
-            // Printing Longitude 
-            Cell<String> lonNum;
-            lonNum = s.map((GpsEvent ev) -> 
-            {
-            String []expected;
-            //Using split to remove space after Longitude and directly print Longitude
-            expected = ev.toString().split(" ");
-            String t3String;
-            //Printing Longitude as it is at place 3 in the array
-            t3String = (expected[3]);
-            //t3String is printing Longitude
-            return t3String;  
-            //hold with no space  is used to make sure there is no hold in the data and it should get printing all together in the GUI
-            }).hold("");
-            //Label for printing Longitude
-            SLabel lC = new SLabel(lonNum);
-            Font fLot = new Font("Serif", Font.BOLD, 16);
-            lC.setFont(fLot);
-            lC.setForeground(Color.ORANGE);
-            lC.setPreferredSize(new Dimension(180, 30));
-            frame.add(lC);  
-
               
             //Layout for printing
             frame.setLayout(new FlowLayout());
