@@ -29,7 +29,7 @@ public class GpsGui {
         //GUI frame heading
         JFrame frame = new JFrame("GUI");
         //Frame Size
-        frame.setSize(470, 450);
+        frame.setSize(470, 650);
         //On Pressing GUI cross stop running the application
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     
@@ -39,6 +39,11 @@ public class GpsGui {
         GpsService serv = new GpsService();
         // Retrieve Event Streams
         Stream<GpsEvent>[] streams = serv.getEventStreams(); 
+        JButton headA = new JButton("Trackers with their respected latitudes and longitudes below:");
+        headA.setForeground(Color.BLACK);
+        headA.setPreferredSize(new Dimension(450, 50));
+        frame.getContentPane().add(headA);
+
 
         //Code to Attach a handler method to each stream from Example.java
         for(Stream<GpsEvent> s : streams)
@@ -124,12 +129,17 @@ public class GpsGui {
             // Setting Gui as visible
             frame.setVisible(true);
         }
+
         //Part 2 
-        String date = new SimpleDateFormat("hh:mm:ss").format(new Date());
-        JButton l = new JButton(date);
-        l.setForeground(Color.ORANGE);
-        l.setPreferredSize(new Dimension(450, 50));
-        frame.getContentPane().add(l);
+        JButton headB = new JButton("Last Tracker Event time: ");
+        headB.setPreferredSize(new Dimension(450, 50));
+        frame.getContentPane().add(headB);
+        frame.add(headB); 
+        String dateTime = new SimpleDateFormat("dd/MM/yyyy, hh:mm:ss").format(new Date());
+        JLabel  dC = new JLabel(dateTime);
+        dC.setForeground(Color.BLUE);
+        frame.add(dC);
+       
 
 
            
