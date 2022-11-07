@@ -154,7 +154,9 @@ public class GpsGui {
         
         JLabel lLB = new JLabel("Latitude Lower Bound: ");
         lLB.setForeground(Color.RED);
-        frame.add(lLB );
+        frame.add(lLB);
+        lLB .setPreferredSize(new Dimension(190, 90));
+
         STextField textA = new STextField("-90.000", 7);
         textA.setPreferredSize(new Dimension(400, 30));
         frame.add(textA);
@@ -162,6 +164,8 @@ public class GpsGui {
         JLabel lUB = new JLabel("Latitude Upper Bound: ");
         lUB.setForeground(Color.BLUE);
         frame.add(lUB );
+        lUB.setPreferredSize(new Dimension(190, 90));
+
         STextField textB = new STextField("90.000", 7);
         textB.setPreferredSize(new Dimension(400, 30));
         frame.add(textB);
@@ -169,7 +173,7 @@ public class GpsGui {
         JLabel loLB = new JLabel("Longitude Lower Bound: ");
         loLB.setForeground(Color.RED);
         frame.add(loLB );
-        loLB.setPreferredSize(new Dimension(500, 30));
+        loLB.setPreferredSize(new Dimension(190, 90));
 
         STextField textC = new STextField("180.000", 7);
         textC.setPreferredSize(new Dimension(400, 30));
@@ -178,6 +182,8 @@ public class GpsGui {
         JLabel loUB = new JLabel("Longitudes Upper Bound: ");
         loUB.setForeground(Color.BLUE);
         frame.add(loUB );
+        loUB .setPreferredSize(new Dimension(190, 90));
+
         STextField textD = new STextField("180.000", 7);
         textD.setPreferredSize(new Dimension(400, 30));
         frame.add(textD);
