@@ -25,7 +25,8 @@ import javax.swing.border.*;
 public class GpsGui {
 
     public static void main(String[] args){
-         //Learned to create my first GUI: https://www.folkstalk.com/tech/jframe-frame-new-jframe-with-code-examples/
+        //Learned to create my first GUI: https://www.folkstalk.com/tech/jframe-frame-new-jframe-with-code-examples/
+        //Used stackoverflow to learn how to print arrays, strings and add textboxes: https://stackoverflow.com
         //GUI frame heading
         JFrame guiFrame = new JFrame("GUI");
         //Frame Size
