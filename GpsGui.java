@@ -29,7 +29,7 @@ public class GpsGui {
         //GUI frame heading
         JFrame frame = new JFrame("GUI");
         //Frame Size
-        frame.setSize(1300, 700);
+        frame.setSize(1300, 750);
         //On Pressing GUI cross stop running the application
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     
