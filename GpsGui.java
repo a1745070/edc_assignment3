@@ -41,7 +41,7 @@ public class GpsGui {
         Stream<GpsEvent>[] streams = serv.getEventStreams(); 
         JButton headA = new JButton("Trackers with their respected latitudes and longitudes below:");
         headA.setForeground(Color.BLACK);
-        headA.setPreferredSize(new Dimension(1350, 50));
+        headA.setPreferredSize(new Dimension(1350, 40));
         frame.getContentPane().add(headA);
 
 
@@ -132,7 +132,7 @@ public class GpsGui {
 
         //Part 2 
         JButton headB = new JButton("Last Tracker Event time: ");
-        headB.setPreferredSize(new Dimension(1350, 50));
+        headB.setPreferredSize(new Dimension(1350, 40));
         frame.getContentPane().add(headB);
         frame.add(headB); 
         JLabel tK= new JLabel("Tracker0, latitude:39.977643, longitude:116.327703");
@@ -146,18 +146,24 @@ public class GpsGui {
 
         //Part 3 A Control Panel  
         JButton headCb = new JButton("Control Panel for Latitude and Longitude: ");
-        headCb.setPreferredSize(new Dimension(1350, 50));
+        headCb.setPreferredSize(new Dimension(1350, 40));
         frame.getContentPane().add(headCb);
         frame.add(headCb);
         
         JLabel lLB = new JLabel("Latitude Lower Bound: ");
-        lLB.setForeground(Color.RED);
+        lLB.setForeground(Color.BLUE);
         frame.add(lLB);
         lLB .setPreferredSize(new Dimension(150, 90));
+
 
         STextField textA = new STextField("-90.000", 7);
         textA.setPreferredSize(new Dimension(400, 30));
         frame.add(textA);
+        textA.setForeground(Color.BLUE);
+        JLabel mkA = new JLabel("-90.000");
+        mkA.setForeground(Color.RED);
+        frame.add(mkA);
+        mkA.setPreferredSize(new Dimension(60, 30));
 
         JLabel lUB = new JLabel("Latitude Upper Bound: ");
         lUB.setForeground(Color.BLUE);
@@ -167,24 +173,39 @@ public class GpsGui {
         STextField textB = new STextField("90.000", 7);
         textB.setPreferredSize(new Dimension(400, 30));
         frame.add(textB);
+        textB.setForeground(Color.BLUE);
+        JLabel mkB = new JLabel("90.000");
+        mkB.setForeground(Color.RED);
+        frame.add(mkB);
+        mkB.setPreferredSize(new Dimension(60, 30));
 
         JLabel loLB = new JLabel("Longitude Lower Bound: ");
-        loLB.setForeground(Color.RED);
+        loLB.setForeground(Color.BLUE);
         frame.add(loLB );
         loLB.setPreferredSize(new Dimension(160, 90));
 
-        STextField textC = new STextField("180.000", 7);
+        STextField textC = new STextField("-180.000", 7);
         textC.setPreferredSize(new Dimension(400, 30));
         frame.add(textC);
+        textC.setForeground(Color.BLUE);
+        JLabel mkC = new JLabel("-180.000");
+        mkC.setForeground(Color.RED);
+        frame.add(mkC);
+        mkC.setPreferredSize(new Dimension(60, 30));
 
         JLabel loUB = new JLabel("Longitudes Upper Bound: ");
         loUB.setForeground(Color.BLUE);
-        frame.add(loUB );
+        frame.add(loUB);
         loUB .setPreferredSize(new Dimension(170, 90));
 
         STextField textD = new STextField("180.000", 7);
         textD.setPreferredSize(new Dimension(400, 30));
         frame.add(textD);
+        textD.setForeground(Color.BLUE);
+        JLabel mkD = new JLabel("180.000");
+        mkD.setForeground(Color.RED);
+        frame.add(mkD);
+        mkD.setPreferredSize(new Dimension(60, 30));
 
         JButton setR = new JButton("SET RANGE");
         setR.setPreferredSize(new Dimension(260, 30));
@@ -195,7 +216,7 @@ public class GpsGui {
 
         //Part 3 B Filtered Event  
         JButton headCa = new JButton("Filtered Event: ");
-        headCa.setPreferredSize(new Dimension(1350, 50));
+        headCa.setPreferredSize(new Dimension(1350, 40));
         frame.getContentPane().add(headCa);
         frame.add(headCa);
         for(Stream<GpsEvent> s : streams)
@@ -288,7 +309,7 @@ public class GpsGui {
 
         //Part 4  
         JButton headD = new JButton("Total distance travelled over the last 5 minutes by each tracker: ");
-        headD.setPreferredSize(new Dimension(1350, 50)); 
+        headD.setPreferredSize(new Dimension(1350, 40)); 
         frame.getContentPane().add(headD);
         frame.add(headD); 
 
