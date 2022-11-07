@@ -29,7 +29,7 @@ public class GpsGui {
         //GUI frame heading
         JFrame frame = new JFrame("GUI");
         //Frame Size
-        frame.setSize(470, 650);
+        frame.setSize(900, 650);
         //On Pressing GUI cross stop running the application
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     
@@ -41,7 +41,7 @@ public class GpsGui {
         Stream<GpsEvent>[] streams = serv.getEventStreams(); 
         JButton headA = new JButton("Trackers with their respected latitudes and longitudes below:");
         headA.setForeground(Color.BLACK);
-        headA.setPreferredSize(new Dimension(450, 50));
+        headA.setPreferredSize(new Dimension(1000, 50));
         frame.getContentPane().add(headA);
 
 
@@ -132,13 +132,25 @@ public class GpsGui {
 
         //Part 2 
         JButton headB = new JButton("Last Tracker Event time: ");
-        headB.setPreferredSize(new Dimension(450, 50));
+        headB.setPreferredSize(new Dimension(1000, 50));
         frame.getContentPane().add(headB);
         frame.add(headB); 
         String dateTime = new SimpleDateFormat("dd/MM/yyyy, hh:mm:ss").format(new Date());
         JLabel  dC = new JLabel(dateTime);
         dC.setForeground(Color.BLUE);
         frame.add(dC);
+
+        //Part 3 
+        JButton headC = new JButton("GPS events in the fixed range of Latitude and Longitude: ");
+        headC.setPreferredSize(new Dimension(1000, 50));
+        frame.getContentPane().add(headC);
+        frame.add(headC);
+
+        //Part 4 
+        JButton headD = new JButton("Total distance travelled over the last 5 minutes by each tracker: ");
+        headD.setPreferredSize(new Dimension(1000, 50)); 
+        frame.getContentPane().add(headD);
+        frame.add(headD);  
        
 
 
