@@ -1,18 +1,26 @@
 import nz.sodium.*;
 import javax.swing.*;
 import swidgets.*;
+import java.awt.*;
+import java.text.*;
+import java.util.*; 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener; 
 import java.awt.FlowLayout;
 import javax.swing.table.*;
 import javax.swing.JComponent;
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.*;  
 import java.awt.Dimension;
 import java.awt.Font;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextArea;
-import javax.swing.WindowConstants;  
+import javax.swing.WindowConstants;
+import java.time.ZonedDateTime;
+import java.util.Date;
+import javax.swing.border.*;
+
 
 public class GpsGui {
 
@@ -24,7 +32,9 @@ public class GpsGui {
         frame.setSize(470, 450);
         //On Pressing GUI cross stop running the application
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    
         
+        //PART 1
         //Code to Initialise the GPS Service from Example.java
         GpsService serv = new GpsService();
         // Retrieve Event Streams
@@ -37,7 +47,6 @@ public class GpsGui {
             //Printing the GPS Data on the terminal
             System.out.println(ev);
              });
-  
 
             //Printing Tracker with numbers
             Cell<String> tNum;
@@ -60,7 +69,8 @@ public class GpsGui {
             Font ft = new Font("Serif", Font.BOLD, 16);
             lA.setFont(ft);
             lA.setForeground(Color.BLUE);
-       
+            // lA.BorderLayout(5, 5);
+            
 
 
             // Printing Latitude 
@@ -106,15 +116,22 @@ public class GpsGui {
             lC.setFont(fLot);
             lC.setForeground(Color.ORANGE);
             lC.setPreferredSize(new Dimension(180, 30));
-            frame.add(lC);
-           
+            frame.add(lC);  
 
-
-           
+              
             //Layout for printing
             frame.setLayout(new FlowLayout());
             // Setting Gui as visible
             frame.setVisible(true);
         }
+        //Part 2 
+        String date = new SimpleDateFormat("hh:mm:ss").format(new Date());
+        JButton l = new JButton(date);
+        l.setForeground(Color.ORANGE);
+        l.setPreferredSize(new Dimension(450, 50));
+        frame.getContentPane().add(l);
+
+
+           
      }
  }
